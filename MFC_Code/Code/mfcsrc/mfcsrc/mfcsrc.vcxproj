@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{821F35AF-46C0-4495-922F-0A99FA62A36A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mfcsrc</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\mfc\afxabort.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxacceleratorkey.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxacceleratorkeyassignctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxanimationcontroller.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxasert.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxautohidebar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxautohidebutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxautohidedocksite.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbasepane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbaseribbonelement.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbasetabbedpane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbasetabctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbasetoolbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcaptionbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcaptionbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcaptionmenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcmdusagecount.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolorbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolorbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolordialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolormenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolorpickerctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolorpopupmenu.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcolorpropertysheet.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcommandmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcontextmenumanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcontrolbarimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcontrolrenderer.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcrit.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxctrlcontainer.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxctrlcontainer2.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcustomcolorspropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcustomizebutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxcustomizemenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdatarecovery.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdbcs.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdesktopalertdialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdesktopalertwnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdialogex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdialogimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdockablepane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdockablepaneadapter.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdockingmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdockingpanesrow.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdocksite.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdragframeimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdrawmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdropdownlistbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxdropdowntoolbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxeditbrowsectrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxfontcombobox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxframeimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxframewndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxfullscreenimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxglobals.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxglobalutils.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxheaderctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afximageeditordialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afximagepaintarea.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxinl1.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxinl2.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxinl3.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxinl4.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxjumplist.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxkeyboardmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxkeymapdialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxlayout.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxlinkctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxlistctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmaskededit.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmdichildwndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmdiclientareawnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmdiframewndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmem.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmenubar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmenuhash.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmenuimages.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmenutearoffmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmousemanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmousepropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxmultipaneframewnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxolecntrframewndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoledocipframewndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoleipframewndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoleserverdocex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoutlookbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoutlookbarpane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoutlookbarpaneadapter.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoutlookbarpanebutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxoutlookbartabctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpanecontainer.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpanecontainermanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpanedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpanedivider.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpaneframewnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpopupmenu.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpopupmenubar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpreviewviewex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpropertygridctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpropertygridtooltipctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxpropertysheet.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxrebar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxrebarstate.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxrecentdocksiteinfo.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxregpath.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxrendertarget.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonbuttonsgroup.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncategory.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncheckbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncollector.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncolorbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncombobox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncommandslistbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonconstructor.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboncustomizedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonedit.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboninfo.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboninfo2.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribboninfoloader.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonkeyboardcustomizedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonkeytip.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonlabel.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonlinkctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonmainpanel.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonminitoolbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonpalettegallery.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonpanel.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonpanelmenu.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonprogressbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonquickaccesstoolbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonslider.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonstatusbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonstatusbarpane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxribbonundobutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxrichpreviewctrlimpl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsettingsstore.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxshelllistctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxshellmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxshelltreectrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxshowallbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsmartdockingguide.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsmartdockinghighlighterwnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsmartdockingmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsound.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxspinbuttonctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxsplitterwndex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxstandardcolorspropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxstate.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxstatusbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtabbedpane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtabctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtabview.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtagmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtaskdialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtaskspane.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtaskspaneframewnd.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtls.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbar.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarbuttoncustomizedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarbuttonslistbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarcomboboxbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbardatetimectrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbardropsource.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbardroptarget.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbareditboxbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarfontcombobox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarimages.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarmenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarmenubuttonsbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarnamedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarscommandslistbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarscustomizedialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarskeyboardpropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarslistcheckbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarslistpropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarsmenupropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarsoptionspropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarspineditboxbutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarstoolspropertypage.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtoolbarsystemmenubutton.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtooltipctrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtooltipmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxtrace.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxusertool.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxusertoolsmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanager.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanageroffice2003.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanageroffice2007.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanagerofficexp.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanagervs2005.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanagervs2008.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanagerwindows.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvisualmanagerwindows7.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxvslistbox.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxwinappex.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxwindowsmanagerdialog.cpp" />
+    <ClCompile Include="..\..\..\mfc\afxwinverapi.cpp" />
+    <ClCompile Include="..\..\..\mfc\appcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\appdlg.cpp" />
+    <ClCompile Include="..\..\..\mfc\apphelp.cpp" />
+    <ClCompile Include="..\..\..\mfc\apphelpx.cpp" />
+    <ClCompile Include="..\..\..\mfc\appinit.cpp" />
+    <ClCompile Include="..\..\..\mfc\appmodul.cpp" />
+    <ClCompile Include="..\..\..\mfc\appprnt.cpp" />
+    <ClCompile Include="..\..\..\mfc\appterm.cpp" />
+    <ClCompile Include="..\..\..\mfc\appui.cpp" />
+    <ClCompile Include="..\..\..\mfc\appui1.cpp" />
+    <ClCompile Include="..\..\..\mfc\appui2.cpp" />
+    <ClCompile Include="..\..\..\mfc\appui3.cpp" />
+    <ClCompile Include="..\..\..\mfc\arccore.cpp" />
+    <ClCompile Include="..\..\..\mfc\arcex.cpp" />
+    <ClCompile Include="..\..\..\mfc\arcobj.cpp" />
+    <ClCompile Include="..\..\..\mfc\arcstrm.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_b.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_d.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_o.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_p.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_s.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_u.cpp" />
+    <ClCompile Include="..\..\..\mfc\array_w.cpp" />
+    <ClCompile Include="..\..\..\mfc\auxdata.cpp" />
+    <ClCompile Include="..\..\..\mfc\barcool.cpp" />
+    <ClCompile Include="..\..\..\mfc\barcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\bardlg.cpp" />
+    <ClCompile Include="..\..\..\mfc\bardock.cpp" />
+    <ClCompile Include="..\..\..\mfc\barstat.cpp" />
+    <ClCompile Include="..\..\..\mfc\bartool.cpp" />
+    <ClCompile Include="..\..\..\mfc\ccdata.cpp" />
+    <ClCompile Include="..\..\..\mfc\cmdtarg.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlcache.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlconn.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctldata.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlevent.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlfont.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlframe.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlinl.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlinplc.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctllic.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlmodul.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlnownd.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlobj.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpbag.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpict.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlppg.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlprop.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpropx.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpset.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpstg.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlpstm.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlquick.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlrefl.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlreg.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctltrack.cpp" />
+    <ClCompile Include="..\..\..\mfc\ctlview.cpp" />
+    <ClCompile Include="..\..\..\mfc\daocore.cpp" />
+    <ClCompile Include="..\..\..\mfc\daodfx.cpp" />
+    <ClCompile Include="..\..\..\mfc\daoview.cpp" />
+    <ClCompile Include="..\..\..\mfc\dbcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\dbflt.cpp" />
+    <ClCompile Include="..\..\..\mfc\dblong.cpp" />
+    <ClCompile Include="..\..\..\mfc\dbrfx.cpp" />
+    <ClCompile Include="..\..\..\mfc\dbvar.cpp" />
+    <ClCompile Include="..\..\..\mfc\dbview.cpp" />
+    <ClCompile Include="..\..\..\mfc\dcmeta.cpp" />
+    <ClCompile Include="..\..\..\mfc\dcprev.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgclr.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgcomm.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgdata.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgdhtml.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgfile.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgfloat.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgfnt.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgfr.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgprnt.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgprntx.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgprop.cpp" />
+    <ClCompile Include="..\..\..\mfc\dlgtempl.cpp" />
+    <ClCompile Include="..\..\..\mfc\dllinit.cpp" />
+    <ClCompile Include="..\..\..\mfc\dllmodul.cpp" />
+    <ClCompile Include="..\..\..\mfc\doccore.cpp" />
+    <ClCompile Include="..\..\..\mfc\dockcont.cpp" />
+    <ClCompile Include="..\..\..\mfc\dockstat.cpp" />
+    <ClCompile Include="..\..\..\mfc\docmapi.cpp" />
+    <ClCompile Include="..\..\..\mfc\docmgr.cpp" />
+    <ClCompile Include="..\..\..\mfc\docmulti.cpp" />
+    <ClCompile Include="..\..\..\mfc\docsingl.cpp" />
+    <ClCompile Include="..\..\..\mfc\doctempl.cpp" />
+    <ClCompile Include="..\..\..\mfc\dumpcont.cpp" />
+    <ClCompile Include="..\..\..\mfc\dumpflt.cpp" />
+    <ClCompile Include="..\..\..\mfc\dumpinit.cpp" />
+    <ClCompile Include="..\..\..\mfc\dumpout.cpp" />
+    <ClCompile Include="..\..\..\mfc\dumpstak.cpp" />
+    <ClCompile Include="..\..\..\mfc\except.cpp" />
+    <ClCompile Include="..\..\..\mfc\filecore.cpp" />
+    <ClCompile Include="..\..\..\mfc\filefind.cpp" />
+    <ClCompile Include="..\..\..\mfc\filelist.cpp" />
+    <ClCompile Include="..\..\..\mfc\filemem.cpp" />
+    <ClCompile Include="..\..\..\mfc\fileshrd.cpp" />
+    <ClCompile Include="..\..\..\mfc\filest.cpp" />
+    <ClCompile Include="..\..\..\mfc\filetxt.cpp" />
+    <ClCompile Include="..\..\..\mfc\filex.cpp" />
+    <ClCompile Include="..\..\..\mfc\fixalloc.cpp" />
+    <ClCompile Include="..\..\..\mfc\inet.cpp" />
+    <ClCompile Include="..\..\..\mfc\inetcall.cpp" />
+    <ClCompile Include="..\..\..\mfc\list_o.cpp" />
+    <ClCompile Include="..\..\..\mfc\list_p.cpp" />
+    <ClCompile Include="..\..\..\mfc\list_s.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_pp.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_pw.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_so.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_sp.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_ss.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_wo.cpp" />
+    <ClCompile Include="..\..\..\mfc\map_wp.cpp" />
+    <ClCompile Include="..\..\..\mfc\mtcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\mtex.cpp" />
+    <ClCompile Include="..\..\..\mfc\nolib.cpp" />
+    <ClCompile Include="..\..\..\mfc\objcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\occcont.cpp" />
+    <ClCompile Include="..\..\..\mfc\occddx.cpp" />
+    <ClCompile Include="..\..\..\mfc\occddxf.cpp" />
+    <ClCompile Include="..\..\..\mfc\occdlg.cpp" />
+    <ClCompile Include="..\..\..\mfc\occevent.cpp" />
+    <ClCompile Include="..\..\..\mfc\occlock.cpp" />
+    <ClCompile Include="..\..\..\mfc\occmgr.cpp" />
+    <ClCompile Include="..\..\..\mfc\occsite.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleasmon.cpp" />
+    <ClCompile Include="..\..\..\mfc\olebar.cpp" />
+    <ClCompile Include="..\..\..\mfc\olecall.cpp" />
+    <ClCompile Include="..\..\..\mfc\olecli1.cpp" />
+    <ClCompile Include="..\..\..\mfc\olecli2.cpp" />
+    <ClCompile Include="..\..\..\mfc\olecli3.cpp" />
+    <ClCompile Include="..\..\..\mfc\olecnvrt.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleconn.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledata.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledisp1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledisp2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledlgs1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledlgs2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledlgs3.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledll.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledobj1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledobj2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledoc1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledoc2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledoccl.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledocip.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledocob.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledoctg.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledocvw.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledrop1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oledrop2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleenum.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleexp.cpp" />
+    <ClCompile Include="..\..\..\mfc\olefact.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleinit.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleipfrm.cpp" />
+    <ClCompile Include="..\..\..\mfc\olelink.cpp" />
+    <ClCompile Include="..\..\..\mfc\olelock.cpp" />
+    <ClCompile Include="..\..\..\mfc\olemisc.cpp" />
+    <ClCompile Include="..\..\..\mfc\olemon.cpp" />
+    <ClCompile Include="..\..\..\mfc\olemsgf.cpp" />
+    <ClCompile Include="..\..\..\mfc\olepset.cpp" />
+    <ClCompile Include="..\..\..\mfc\olereg.cpp" />
+    <ClCompile Include="..\..\..\mfc\olestrm.cpp" />
+    <ClCompile Include="..\..\..\mfc\olesvr1.cpp" />
+    <ClCompile Include="..\..\..\mfc\olesvr2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oletsvr.cpp" />
+    <ClCompile Include="..\..\..\mfc\oletyplb.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleui1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleui2.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleunk.cpp" />
+    <ClCompile Include="..\..\..\mfc\olevar.cpp" />
+    <ClCompile Include="..\..\..\mfc\olevar1.cpp" />
+    <ClCompile Include="..\..\..\mfc\oleverb.cpp" />
+    <ClCompile Include="..\..\..\mfc\plex.cpp" />
+    <ClCompile Include="..\..\..\mfc\rawdllmainproxy.c" />
+    <ClCompile Include="..\..\..\mfc\sockcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\sockexp.cpp" />
+    <ClCompile Include="..\..\..\mfc\stdafx.cpp" />
+    <ClCompile Include="..\..\..\mfc\strcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\thrdcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\timecore.cpp" />
+    <ClCompile Include="..\..\..\mfc\tooltip.cpp" />
+    <ClCompile Include="..\..\..\mfc\trckrect.cpp" />
+    <ClCompile Include="..\..\..\mfc\validadd.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewcmn.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewcore.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewedit.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewform.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewhtml.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewoled.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewprev.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewprnt.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewrich.cpp" />
+    <ClCompile Include="..\..\..\mfc\viewscrl.cpp" />
+    <ClCompile Include="..\..\..\mfc\winbtn.cpp" />
+    <ClCompile Include="..\..\..\mfc\wincore.cpp" />
+    <ClCompile Include="..\..\..\mfc\wincore2.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl1.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl2.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl3.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl4.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl5.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl6.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl7.cpp" />
+    <ClCompile Include="..\..\..\mfc\winctrl8.cpp" />
+    <ClCompile Include="..\..\..\mfc\winfrm.cpp" />
+    <ClCompile Include="..\..\..\mfc\winfrm2.cpp" />
+    <ClCompile Include="..\..\..\mfc\winfrmx.cpp" />
+    <ClCompile Include="..\..\..\mfc\wingdi.cpp" />
+    <ClCompile Include="..\..\..\mfc\wingdix.cpp" />
+    <ClCompile Include="..\..\..\mfc\winhand.cpp" />
+    <ClCompile Include="..\..\..\mfc\winmain.cpp" />
+    <ClCompile Include="..\..\..\mfc\winmdi.cpp" />
+    <ClCompile Include="..\..\..\mfc\winmenu.cpp" />
+    <ClCompile Include="..\..\..\mfc\winmini.cpp" />
+    <ClCompile Include="..\..\..\mfc\winocc.cpp" />
+    <ClCompile Include="..\..\..\mfc\winsplit.cpp" />
+    <ClCompile Include="..\..\..\mfc\winstr.cpp" />
+    <ClCompile Include="..\..\..\mfc\winutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\mfc\afximpl.h" />
+    <ClInclude Include="..\..\..\mfc\ctlimpl.h" />
+    <ClInclude Include="..\..\..\mfc\daoimpl.h" />
+    <ClInclude Include="..\..\..\mfc\dbimpl.h" />
+    <ClInclude Include="..\..\..\mfc\dispimpl.h" />
+    <ClInclude Include="..\..\..\mfc\elements.h" />
+    <ClInclude Include="..\..\..\mfc\fixalloc.h" />
+    <ClInclude Include="..\..\..\mfc\occimpl.h" />
+    <ClInclude Include="..\..\..\mfc\olebind.h" />
+    <ClInclude Include="..\..\..\mfc\oleimpl2.h" />
+    <ClInclude Include="..\..\..\mfc\sockimpl.h" />
+    <ClInclude Include="..\..\..\mfc\stdafx.h" />
+    <ClInclude Include="..\..\..\mfc\winhand_.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\mfc\indicate.rc" />
+    <ResourceCompile Include="..\..\..\mfc\mfcdll.rc" />
+    <ResourceCompile Include="..\..\..\mfc\mfcintl.rc" />
+    <ResourceCompile Include="..\..\..\mfc\prompts.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
